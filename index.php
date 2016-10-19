@@ -29,17 +29,17 @@
         <hr>
 
         <!-- Project Two -->
-        <div class="row coming-soon">
+        <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <img class="img-responsive" src="demo/lesson-1/screenshot.png" alt="">
                 </a>
             </div>
             <div class="col-md-5">
-                <h3>Next week's lesson...</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-                <a class="btn btn-primary" href="#">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="#">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <h3>Lesson 1</h3>
+                <h4>JavaScript basics and an image slider</h4>
+                <p>In this lesson, we look at the basics of programming in Javascript and how to use it to access objects on a web page. Our first demo is a simple image slider that can be controlled with two buttons on the page.</p>
+                <a class="btn btn-primary" href="demo/lesson-1/demo.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-1/lesson-1.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <!-- /.row -->

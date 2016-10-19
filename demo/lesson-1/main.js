@@ -1,0 +1,6 @@
+
+function nextSlide() {
+}
+
+function prevSlide() {
+}
