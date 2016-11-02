@@ -36,7 +36,7 @@
                 </a>
             </div>
             <div class="col-md-5">
-                <h3>Lesson 3</h3>
+                <h3>Lesson 2</h3>
                 <h4>JavaScript basics and an image slider</h4>
                 <p>In this lesson, we look at the basics of programming in Javascript and how to use it to access objects on a web page. Our first demo is a simple image slider that can be controlled with two buttons on the page.</p>
                 <a class="btn btn-primary" href="demo/lesson-1/demo.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-1/lesson-1.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
