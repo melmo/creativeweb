@@ -1,0 +1,173 @@
+<html>
+<head>
+	<title>Creative Web Lesson 3</title>
+</head>
+<body>
+	<div style="max-width:600px;margin:auto; ">
+		<p style="text-align:center;">
+		<a title="By Enzoklop (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ARock-paper-scissors.svg"><img width="256" alt="Rock-paper-scissors" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/256px-Rock-paper-scissors.svg.png"/></a>
+	</p>
+<h1>Here are the demo links for today :)</h1>
+<ul>
+	<li><a onClick="hello()" href="#">Hello</a></li>
+	<li><a onClick="lunch()" href="#">Lunch</a></li>
+	<li><a onClick="monster()" href="#">Monster</a></li>
+	<li><a onClick="paperScissorsRock()" href="#">Paper Scissors Rock</a></li>
+</ul>
+</div>
+<script>
+function hello() {
+	var time = prompt("What's the time'?","Enter the hour between 0 and 23");
+
+	if (time < 12) {
+		alert("Good morning!");
+	} else if (time < 18) {
+		alert("Good afternoon!");
+	} else {
+		alert("Good evening!");
+	}
+}
+</script>
+
+
+<script>
+function lunch() {
+	var lunch = prompt("What do you want for lunch?","Type your lunch choice here");
+
+	switch(lunch){
+	  case 'sandwich':
+	    alert("Sure thing! One sandwich, coming up.");
+	    break;
+	  case 'soup':
+	    alert("Got it! Tomato's my favorite.");
+	    break;
+	  case 'salad':
+	    alert("Sounds good! How about a caesar salad?");
+	    break;
+	  case 'pie':
+	    alert("Pie's not a meal!");
+	    break;
+	  default:
+	    alert("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
+	}
+}
+</script>
+
+<script>
+
+function monster() {
+var monster = prompt("You're walking through the forest, minding your own business, and you run into a monster! Do you FIGHT him, PAY him, or RUN?").toUpperCase();
+
+switch(monster) {
+  case 'FIGHT':
+    var strong = prompt("How courageous! Are you strong (YES or NO)?").toUpperCase();
+    var smart = prompt("Are you smart?").toUpperCase();
+    if(strong === 'YES' || smart === 'YES') {
+      alert("You only need one of the two! You beat the monster--nice work!");
+    } else {
+      alert("You're not strong OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a monster. You lose!");
+    }
+    break;
+  case 'PAY':
+    var money = prompt("All right, we'll pay the monster. Do you have any money (YES or NO)?").toUpperCase();
+    var dollars = prompt("Is your money in monster Dollars?").toUpperCase();
+    if(money === 'YES' && dollars === 'YES') {
+      alert("Great! You pay the monster and continue on your merry way.");
+    } else {
+      alert("Dang! This monster only takes monster Dollars. You get whomped!");
+    }
+    break;
+  case 'RUN':
+    var fast = prompt("Let's book it! Are you fast (YES or NO)?").toUpperCase();
+    var headStart = prompt("Did you get a head start?").toUpperCase();
+    if(fast === 'YES' || headStart === 'YES') {
+      alert("You got away--barely! You live to stroll through the forest another day.");
+    } else {
+      alert("You're not fast and you didn't get a head start? You never had a chance! The monster eats you.");
+    }
+    break;
+  default:
+    alert("I didn't understand your choice. Hit Run and try again, this time picking FIGHT, PAY, or RUN!");
+}
+
+}
+
+</script>
+
+<script>
+
+function paperScissorsRock() {
+	var choicesSelected = false;
+	var userChoice;
+	var computerChoice;
+	var winner;
+
+	var makeChoices = function() {
+		userChoice = prompt("Do you choose Rock, Paper or Scissors?").toUpperCase();
+	    computerChoice = Math.random();
+
+		if (computerChoice <= 0.33) {
+		    computerChoice = "ROCK";
+		} else if (computerChoice > 0.33 && computerChoice <= 0.66) {
+		    computerChoice = "PAPER";
+		} else if (computerChoice > 0.66) {
+		    computerChoice = "SCISSORS";
+		} 
+	}
+
+	var doChoicesMatch = function(choice1, choice2) {
+		if (choice1 === choice2) {
+	        return true;
+	    } else {
+	    	return false;
+	    }
+	}
+
+	var compare = function(choice1, choice2) {
+	    
+	    
+	    if (choice1 === "ROCK") {
+	        if (choice2 === "PAPER") {
+	            return "Paper Wins!";
+	        } else if (choice2 === "SCISSORS") {
+	            return "Rock Wins!";
+	        } 
+	    }
+
+	    if (choice1 === "PAPER") {
+	        if (choice2 === "ROCK") {
+	            return "Rock Wins!";
+	        } else if (choice2 === "SCISSORS") {
+	            return "Scissors Wins!";
+	        } 
+	    }
+
+	    if (choice1 === "SCISSORS") {
+	        if (choice2 === "ROCK") {
+	            return "Rock Wins!";
+	        } else if (choice2 === "PAPER") {
+	            return "Scissors Wins!";
+	        } 
+	    }
+
+	    
+	};
+
+	while (!choicesSelected) {
+		makeChoices();
+		if (doChoicesMatch(userChoice,computerChoice)) {
+			alert("The result is a tie, you'll have to try again.")
+		} else {
+			choicesSelected = true;
+		}
+	}
+
+	winner = compare(userChoice,computerChoice);
+
+	alert("The computer chose: " + computerChoice + ".\nYou chose: " + userChoice + ".\n" + winner );
+}
+
+</script>
+
+</body>
+</html>

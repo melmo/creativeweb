@@ -46,4 +46,22 @@
 
         <hr>
 
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="demo/lesson-3/screenshot.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Lesson 3</h3>
+                <h4>Control flow and some games</h4>
+                <p>In this lesson we revise functions and control flow and use our skills to build some simple games.</p>
+                <a class="btn btn-primary" href="demo/lesson-3/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-3/lesson-3.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
 <?php require_once("footer.php"); ?>
