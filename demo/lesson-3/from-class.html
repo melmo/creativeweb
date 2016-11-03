@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Creative Web - Lesson 3</h1>
+		<ul>
+			<li><a onClick="hello()" href="#">Hello</a></li>
+			<li><a onClick="paperScissorsRock()" href="#">Paper Scissors Rock</a></li>
+		</ul>
+	<script>
+
+	function hello() {
+		// alert('hello world!');
+		var time = prompt("What's the time?", "Enter the hour between 0 and 23"); // hour of the day
+		if(isNaN(time) || time < 0 || time > 23) {
+			alert("nope");
+		} else {
+			if (time < 12) {
+				alert("Good morning Mel!")
+			} else if (time < 14) {
+				alert("Good afternoon Mel!")
+			} else if (!isNaN(time)) {
+				alert("It's time to stop work now Mel!")
+			}
+		}
+		
+	}
+	
+	function paperScissorsRock() {
+		// paper scissors and rock
+		// use a random function to make the computer choice
+		// use prompt to get the user's choice
+		// check to see who won / define winner
+		// let the user know who won	
+		var choices = ["PAPER", "SCISSORS", "ROCK"];
+		var playerChoice = prompt("Choose paper, scissors or rock").toUpperCase();	
+		var random = Math.floor(Math.random() * 3);
+		var computerChoice = choices[random];
+
+		if (playerChoice === computerChoice) {
+			alert("Computer: " + computerChoice + " Human: " + playerChoice + " It's a draw!");
+			return;
+		}
+
+		if (playerChoice == "SCISSORS") {
+
+		}
+		alert("Someone has won, but who?");
+	}
+	</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
