@@ -47,6 +47,9 @@
                     <li>
                         <a href="about.php">About</a>
                     </li>
+                    <li>
+                        <a href="resources.php">Resources</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
