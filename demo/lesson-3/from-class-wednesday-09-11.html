@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Creative Web - Lesson 3</h1>
+		<ul>
+			<li><a onClick="hello()" href="#">Hello</a></li>
+			<li><a onClick="paperScissorsRock()" href="#">Paper Scissors Rock</a></li>
+			<li><a onClick="lunch()" href="#">What's for lunch?</a></li>
+			<li><a onClick="switchInFor()" href="#">switchInFor</a></li>
+		</ul>
+	<script>
+
+	function hello() {
+		// alert('hello world!');
+		//var time = prompt("What's the time?", "Enter the hour between 0 and 23"); // hour of the day
+		var date = new Date();
+		var time = date.getHours();
+		alert(time);
+		if(isNaN(time) || time < 0 || time > 23) {
+			alert("nope");
+		} else {
+			if (time < 12) {
+				alert("Good morning Mel!")
+			} else if (time < 14) {
+				alert("Good afternoon Mel!")
+			} else if (!isNaN(time)) {
+				alert("It's time to stop work now Mel!")
+			}
+		}
+		
+	}
+	
+	function paperScissorsRock() {
+		// paper scissors and rock
+		// use a random function to make the computer choice
+		// use prompt to get the user's choice
+		// check to see who won / define winner
+		// let the user know who won	
+		var choices = ["PAPER", "SCISSORS", "ROCK"];
+		var playerChoice;
+		var random = Math.floor(Math.random() * 3);
+		var computerChoice = choices[random];
+
+		var noPlayerChoice = true;
+
+		while(noPlayerChoice) {
+			playerChoice = prompt("Choose paper, scissors or rock").toUpperCase();
+			if (!choices.includes(playerChoice)) {
+				alert("bad input!!");
+			} else if (playerChoice === computerChoice) {
+				alert("Computer: " + computerChoice + " Human: " + playerChoice + " It's a draw!");
+			} else {
+				noPlayerChoice = false;
+			}
+		}
+
+		var winner = "";
+		if (playerChoice == "PAPER") {
+			if (computerChoice == "SCISSORS") {
+				winner = "Computer";
+			} else {
+				winner = "Human";
+			}
+		} else if (playerChoice == "ROCK") {
+			if (computerChoice == "PAPER") {
+				winner = "Computer";
+			} else {
+				winner = "Human";
+			}
+
+		} else if (playerChoice == "SCISSORS") {
+			if (computerChoice == "ROCK") {
+				winner = "Computer";
+			} else {
+				winner = "Human";
+			}
+		}
+		/*if ((playerChoice == "ROCK" && computerChoice == "PAPER")
+			|| (playerChoice == "PAPER" && computerChoice == "SCISSORS")
+			|| (playerChoice == "SCISSORS" && computerChoice == "ROCK")) {
+			winner = "Computer";
+		} else {
+			winner = "Human";
+		}*/
+		alert("Computer: " + computerChoice + " Human: " + playerChoice + " Winner: " + winner);
+	}
+
+	function lunch() {
+		// console.log('yum!');
+		/*
+		if (userChoice == "pie") {
+			alert("pie is delicious!");
+		} else if (userChoice == "yoghurt") {
+			alert("yoghurt's not very filling :(")
+		}
+		*/
+
+		var userChoice; // undefined 
+		var hasUserChoice = false;
+		
+		while(!hasUserChoice) {
+
+			userChoice = prompt('What do you want for lunch?','Enter your choice.');
+		    console.log(userChoice);
+		    hasUserChoice = true;
+			switch(userChoice) {
+				case 'pie' :
+					alert('I love pie! So delish');
+					break;
+				case 'yoghurt' :
+					alert('You should eat more than yoghurt for lunch!');
+					break;
+				case 'soup' :
+					alert('Soup is great in winter.');
+					break;	
+				case 'curry' :
+					alert('Curry is great in winter.');
+					break;	
+				case 'sushi' :
+					alert('Suchi is not great in winter.');
+					break;
+				case 'falafel' :
+					alert('Suchi is not great in winter.');
+					break;	
+				default :
+					alert("Sorry we don't have " + userChoice + ". Choose better next time!");
+					//alert('Sorry, I didn\'t understand. Make a better choice!'); // optional other way to handle quote mark
+					hasUserChoice = false;
+
+			}
+		}
+		
+	}
+	function switchInFor() {
+		for (var i = 0; i < 100; i++) {
+			
+			switch(i % 7) {
+				case 0 :	
+					break;
+				default :
+					console.log(i);
+			}
+		}
+	}
+	</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
