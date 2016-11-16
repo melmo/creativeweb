@@ -84,14 +84,14 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-responsive" src="demo/lesson-4/screenshot.png" alt="">
+                    <img class="img-responsive" src="demo/lesson-5/screenshot.png" alt="">
                 </a>
             </div>
             <div class="col-md-5">
-                <h3>Lesson 4</h3>
+                <h3>Lesson 5</h3>
                 <h4>Porting our games to use the DOM</h4>
                 <p>In this lesson we will port the Rock, Papers, and Scissors game to use the DOM instead of showing alerts.</p>
-                <a class="btn btn-primary" href="demo/lesson-4/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-4/lesson-4.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" href="demo/lesson-5/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-5/lesson-5.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
         <!-- /.row -->
