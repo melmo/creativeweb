@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Creative Web Lesson 5</title>
+    </head>
+    <body>
+        <div style="max-width:600px;margin:auto; ">
+            <h1>Rock, Scissors, Paper</h1>
+            <img id="rock" src="rock-hand.svg" onclick="play('rock')" />
+            <img id="scissors" src="scissors-hand.svg" onclick="play('scissors')" />
+            <img id="paper" src="paper-hand.svg" onclick="play('paper')" />
+            <h1>Computer</h1>
+
+            <img id="computer-rock" src="rock-hand.svg" />
+            <img id="computer-scissors" src="scissors-hand.svg" />
+            <img id="computer-paper" src="paper-hand.svg" />
+
+            <p id="result"></p>
+        </div>
+
+        <script>
+            var userChoice;
+
+            function chooseRandomly() {
+                var random = Math.floor(3 * Math.random());
+
+                var choices = [ 'rock', 'paper', 'scissors' ];
+
+                return choices[random];
+            }
+
+            function evaluate(one, two) {
+                var winner;
+
+                switch (one) {
+                    case "rock":
+                        if (two == "rock")
+                            winner = "it's a tie";
+                        else if (two == "paper")
+                            winner = "you lose, because paper beats rock";
+                        else if (two == "scissors")
+                            winner = "you win, because rock beats scissors";
+                        break;
+
+                    case "paper":
+                        if (two == "rock")
+                            winner = "you win, because paper beats rock";
+                        else if (two == "paper")
+                            winner = "it's a tie";
+                        else if (two == "scissors")
+                            winner = "you lose, because scissors beats paper";
+                        break;
+
+                    case "scissors":
+                        if (two == "rock")
+                            winner = "you lose, because rock beats scissors";
+                        else if (two == "paper")
+                            winner = "you win, because scissors beats paper";
+                        else if (two == "scissors")
+                            winner = "it's a tie";
+                        break;
+                }
+
+                var result = document.getElementById('result');
+                result.innerHTML = 'You chose ' + one + ' and the computer chose ' + two + ' - ' + winner;
+            }
+
+            var count = 0;
+
+            function animationTimeout() {
+                count += 1;
+
+                document.getElementById('computer-rock').style.opacity = 0.1;
+                document.getElementById('computer-paper').style.opacity = 0.1;
+                document.getElementById('computer-scissors').style.opacity = 0.1;
+
+                var computerChoice = chooseRandomly();
+
+                document.getElementById('computer-' + computerChoice).style.opacity = 1.0;
+
+                if (count <= 5) {
+                    setTimeout(animationTimeout, 400);
+                } else {
+                    evaluate(userChoice, computerChoice);
+                    count = 0;
+                }
+            }
+
+            function play(choice) {
+                document.getElementById('rock').style.opacity = 0.1;
+                document.getElementById('paper').style.opacity = 0.1;
+                document.getElementById('scissors').style.opacity = 0.1;
+
+                document.getElementById(choice).style.opacity = 1.0;
+
+                userChoice = choice;
+
+                setTimeout(animationTimeout, 400);
+            }
+        </script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
