@@ -116,4 +116,22 @@
 
         <hr>
 
+        <!-- Project Seven -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="demo/lesson-7/screenshot.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Lesson 7</h3>
+                <h4>Build interactive maps</h4>
+                <p>In this lesson we use the Google Map API to build interactive maps</p>
+                <a class="btn btn-primary" href="demo/lesson-7/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-7/lesson-7.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
 <?php require_once("footer.php"); ?>
