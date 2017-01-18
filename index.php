@@ -132,6 +132,22 @@
         </div>
         <!-- /.row -->
 
+        <!-- Project Eight -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="demo/lesson-8/screenshot.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Lesson 8</h3>
+                <h4>Interactive maps with weather</h4>
+                <p>In this lesson we use the Open Weather API to build an interactive that shows the current weather in different capital cities</p>
+                <a class="btn btn-primary" href="demo/lesson-8/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-8/lesson-8.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
         <hr>
 
 <?php require_once("footer.php"); ?>
