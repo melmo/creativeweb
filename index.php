@@ -152,4 +152,22 @@
 
         <hr>
 
+        <!-- Project Nine -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="demo/lesson-9/screenshot.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Lesson 9</h3>
+                <h4>Interactive maps with photos</h4>
+                <p>In this lesson we use the Flickr API to build an interactive map that shows the current weather and photos in different capital cities</p>
+                <a class="btn btn-primary" href="demo/lesson-9/index.html">View Demo <span class="glyphicon glyphicon-chevron-right"></span></a> <a class="btn btn-primary" href="demo/lesson-9/lesson-9.zip">Download Demo <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
 <?php require_once("footer.php"); ?>
