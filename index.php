@@ -1,7 +1,7 @@
 <?php require_once("header.php"); ?>
 
 		<!-- Page Heading -->
-        <div class="row">
+        <div class="row"> 
             <div class="col-lg-12">
                 <h1 class="page-header">Lesson Materials
                     <small>Links and Downloads</small>
